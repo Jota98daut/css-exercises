@@ -45,3 +45,29 @@ body, html {
 .footer {
   background-color: #393f4d;
 }
+
+/* My solution */
+
+.container {
+  display: grid;
+  grid-template: 1fr 1fr 5fr 1fr / 1fr 3fr;
+  grid-template-areas: 
+    "header  header"
+    "sidebar nav"
+    "sidebar article"
+    "footer  footer";
+  gap: 15px;
+}
+
+.header { grid-area: header; }
+
+.sidebar { grid-area: sidebar; }
+
+.nav { grid-area: nav; }
+
+.article {
+  grid-area: article;
+  overflow: scroll;
+}
+
+.footer { grid-area: footer; }
